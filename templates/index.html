@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Index Page To Search Products</title>
+{% endblock head %}
+
+{% block body %}
+
+
+<div class="content">
+    <br>
+    <h1 style="text-align: center"><i>Search for the Product.</i></h1><br>
+    <h4 style="text-align: center"><b>Note:</b>If you are searching for product which contain numeric value in
+        it add ' '
+        between the text and numeric value.<br>For eg. Iphone7 can be written as Iphone 7</h4><br><br>
+    <!-- <div class="form">
+                <form action="/" method="POST">
+                    <label><b>Enter product to be searched:</b></label> <input type="text" name="content" id="content" ><br><br>
+                    <label><b>Enter the expected review count you need:</b></label> <input type="text" name="expected_review" id="expected_review"><br><br>
+                    <label><b>If you have id with you enter here:</b></label> <input type="text" name="id" id="id" ><br><br>
+                    <input type="submit" value="Search">
+                </form>
+             </div> -->
+
+    <div class="p-3 mb-2 bg-dark text-white">
+        <div class="container" style="padding: 25px;">
+            <h2 class="mt-2 mb-5 fw-bold fs-1">Search A Review</h2>
+            <form method="POST" action="/">
+                <div class="mb-3 row p-5 ">
+                    <label for="search" class="col-sm-2 col-form-label fs-3">To-Do Search</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control fs-2" id="search" name="search"
+                            placeholder="To-Do Search">
+                    </div>
+                    <div class="col-auto"><br>
+                        <button type="submit" class="btn btn-primary mb-2 btn-lg fs-3">Search?</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock body %}

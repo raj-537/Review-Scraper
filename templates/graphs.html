@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!-- D3.js -->
+<script src="https://cdn.plot.ly/plotly-2.8.3.min.js"></script>
+
+
+<title>GRAPH For the Data We Got</title>
+
+{% endblock head %}
+
+{% block body %}
+<div class="container-fluid">
+    <div id="chart" style="height: 800px;"></div>
+    <div class="m-5 position-relative ">
+        <h1 class="position-absolute top-50 start-50 translate-middle">Frequency Plot of All the Data We Get </h1>
+    </div>
+</div>
+
+
+<!-- Plotly CDN -->
+
+{% endblock body %}
+
+{% block plotly %}
+<script type="text/javascript">
+    TESTER = document.getElementById('chart');
+
+
+    Plotly.newPlot(TESTER, {{ jsonGraph | safe }}, {});
+
+</script>
+{% endblock plotly %}
